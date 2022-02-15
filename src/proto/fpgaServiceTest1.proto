@@ -1,0 +1,27 @@
+syntax = "proto3";//这里proto2和proto3都可以，srpc都支持
+
+message FpgaRequest {
+    string message = 1;
+    string name = 2;
+};
+
+message FpgaResponse {
+    string message = 1;
+};
+
+service FpgaServiceSilly {
+    rpc Run(FpgaRequest) returns (FpgaResponse);
+};
+
+service FpgaServiceStart {
+    rpc Run(FpgaRequest) returns (FpgaResponse);
+};
+
+service FpgaServiceStop {
+    rpc Run(FpgaRequest) returns (FpgaResponse);
+};
+
+service FpgaServiceStat {
+    rpc Run(FpgaRequest) returns (FpgaResponse);
+};
+
